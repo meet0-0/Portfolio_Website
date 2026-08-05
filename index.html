@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meet Patel — Computer Engineering Student</title>
+<meta name="description" content="Meet Patel — Embedded Systems &amp; FPGA engineer building hardware for robotics and real-world signal processing.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- BOOT SEQUENCE -->
+<!-- ============================================================ -->
+<div id="boot" aria-hidden="true">
+  <div class="boot-inner">
+    <div class="boot-scope">
+      <svg viewBox="0 0 300 80" class="boot-trace">
+        <polyline id="bootTrace" points="" />
+      </svg>
+    </div>
+    <div class="boot-log" id="bootLog"></div>
+    <div class="boot-bar"><div class="boot-bar-fill" id="bootFill"></div></div>
+  </div>
+</div>
+
+<!-- persistent ambient canvas: grid + faint traces -->
+<canvas id="bgCanvas"></canvas>
+
+<!-- ============================================================ -->
+<!-- NAV -->
+<!-- ============================================================ -->
+<header id="siteHeader">
+  <div class="wrap nav">
+    <a href="#top" class="logo">MEET<span>_</span>PATEL</a>
+    <nav class="nav-links">
+      <a href="#about"><small>About</small></a>
+      <a href="#projects"><small>Projects</small></a>
+      <a href="#experience"><small>Experience</small></a>
+      <a href="#skills"><small>Skills</small></a>
+      <a href="#terminal"><small>Terminal</small></a>
+    </nav>
+    <div class="status-chip"><span class="dot"></span>ONLINE</div>
+  </div>
+  <div class="scan-line"></div>
+</header>
+
+<main id="top">
+
+<!-- ============================================================ -->
+<!-- HERO -->
+<!-- ============================================================ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-left reveal">
+      <p class="eyebrow">EMBEDDED SYSTEMS &middot; FPGA &middot; ROBOTICS</p>
+      <h1>I build hardware<br>that solves<br><span class="accent">real&#8209;world</span> problems.</h1>
+      <p class="hero-sub">
+        Computer Engineering student building FPGA systems, embedded
+        applications, and robotics. Currently seeking
+        <strong>Summer 2027 Embedded Engineering</strong> internships.
+      </p>
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="Meet_Patel_Resume.pdf" download>Resume</a>
+        <a class="btn btn-ghost" href="https://github.com/meet0-0" target="_blank" rel="noopener">GitHub &#8599;</a>
+        <a class="btn btn-ghost" href="https://linkedin.com/in/meetpatel-tech" target="_blank" rel="noopener">LinkedIn &#8599;</a>
+      </div>
+      <div class="terminal-teaser">
+        <span class="prompt">$</span><span id="typeTarget"></span><span class="cursor">&#9608;</span>
+      </div>
+    </div>
+
+    <div class="hero-right reveal" style="--delay:120ms">
+      <div class="scope-panel">
+        <div class="scope-head">
+          <span>OSCILLOSCOPE</span>
+          <span class="scope-live">&#9679; LIVE</span>
+        </div>
+        <canvas id="scopeCanvas" width="520" height="300"></canvas>
+        <div class="scope-legend">
+          <div class="ch ch1"><i></i>CH1 &mdash; LINUX</div>
+          <div class="ch ch2"><i></i>CH2 &mdash; FPGA</div>
+          <div class="ch ch3"><i></i>CH3 &mdash; EMBEDDED C</div>
+          <div class="ch ch4"><i></i>CH4 &mdash; FUSION 360</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-divider" data-amp="10"><svg preserveAspectRatio="none" viewBox="0 0 1200 60"><path id="wave1" /></svg></div>
+
+<!-- ============================================================ -->
+<!-- ABOUT + SYSTEM DASHBOARD -->
+<!-- ============================================================ -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <p class="section-tag">ABOUT</p>
+      <h2>Signal in, structure out.</h2>
+      <p class="body-text">
+        I like systems where software meets hardware &mdash; the boundary where
+        a line of C becomes a voltage, and a voltage becomes motion. My work
+        spans FPGA development, embedded firmware, and robotics,
+        with Linux as the backbone underneath all of it.
+      </p>
+      <p class="body-text">
+        Right now that means state machines in VHDL, control loops for a
+        combat robot, and a growing comfort with the tools &mdash; Vivado,
+        KiCad, ROS2 &mdash; that turn ideas into working boards.
+      </p>
+    </div>
+
+    <div class="dashboard reveal" style="--delay:120ms">
+      <div class="dashboard-head">
+        <span>SYSTEM</span>
+        <span class="dashboard-id">meetpatel@embedded &mdash; v5.0</span>
+      </div>
+      <dl class="dash-grid">
+        <div><dt>CPU</dt><dd>Computer Engineering Student</dd></div>
+        <div><dt>RAM</dt><dd>Always Learning</dd></div>
+        <div><dt>STATUS</dt><dd class="ok">Open to Work</dd></div>
+        <div><dt>CURRENT BUILD</dt><dd>Combat Robot</dd></div>
+        <div><dt>NEXT BUILD</dt><dd>Embedded Linux</dd></div>
+        <div><dt>UPTIME</dt><dd>22 Years</dd></div>
+        <div><dt>LOCATION</dt><dd>Binghamton, New York</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<div class="wave-divider" data-amp="16"><svg preserveAspectRatio="none" viewBox="0 0 1200 60"><path id="wave2" /></svg></div>
+
+<!-- ============================================================ -->
+<!-- FEATURED PROJECT -->
+<!-- ============================================================ -->
+<section id="projects">
+  <div class="wrap">
+    <p class="section-tag reveal">PROJECTS</p>
+    <h2 class="reveal">Featured Build</h2>
+
+    <div class="featured reveal">
+      <div class="featured-media">
+        <div class="architecture">
+          <div class="node">Controller</div>
+          <div class="arrow">&#8595;</div>
+          <div class="node">Motor Driver</div>
+          <div class="arrow">&#8595;</div>
+          <div class="node">Gearbox</div>
+          <div class="arrow">&#8595;</div>
+          <div class="node">Drive Motors</div>
+          <div class="arrow">&#8595;</div>
+          <div class="node node-final">Combat Robot</div>
+        </div>
+      </div>
+      <div class="featured-info">
+        <h3>Combat Robot</h3>
+        <p class="body-text">
+          Designed and built a competition combat robot from the ground up
+          &mdash; embedded control firmware, motor driver selection, and a
+          chassis engineered to survive direct hits. Led a team through rapid
+          iteration cycles between design, fabrication, and testing.
+        </p>
+        <ul class="metrics">
+          <li><strong>3</strong><span>Motor Channels</span></li>
+          <li><strong>2</strong><span>Iterations Built</span></li>
+          <li><strong>1</strong><span>Team Led</span></li>
+          <li><strong>&infin;</strong><span>Failure Analyses</span></li>
+        </ul>
+        <div class="chips">
+          <span>Embedded C</span><span>Motor Control</span><span>Fusion 360</span><span>Rapid Prototyping</span>
+        </div>
+        <a class="btn btn-ghost" href="https://github.com/meet0-0/Combat_Robot" target="_blank" rel="noopener">View Repository &#8599;</a>
+      </div>
+    </div>
+
+    <div class="project-grid">
+
+      <article class="project-card reveal">
+        <div class="card-top">
+          <span class="card-tag">FPGA</span>
+          <span class="card-freq" aria-hidden="true"><svg viewBox="0 0 60 20"><polyline points="0,10 5,4 10,16 15,2 20,18 25,6 30,14 35,4 40,16 45,8 50,12 55,6 60,10"/></svg></span>
+        </div>
+        <h3>Digital Stopwatch</h3>
+        <p>A precision stopwatch built entirely from digital logic &mdash; no microcontroller, just state machines and a clock.</p>
+        <ul class="metrics metrics-sm">
+          <li><strong>6</strong><span>Modules</span></li>
+          <li><strong>4</strong><span>State Machines</span></li>
+          <li><strong>100MHz</strong><span>Clock</span></li>
+          <li><strong>0</strong><span>Timing Violations</span></li>
+        </ul>
+        <div class="chips"><span>VHDL</span><span>Artix-7</span><span>Basys 3</span></div>
+        <a class="card-link" href="https://github.com/meet0-0/digital-stopwatch" target="_blank" rel="noopener">View Repository &#8599;</a>
+      </article>
+
+      <article class="project-card reveal" style="--delay:80ms">
+        <div class="card-top">
+          <span class="card-tag">EMBEDDED</span>
+          <span class="card-freq" aria-hidden="true"><svg viewBox="0 0 60 20"><polyline points="0,10 8,10 8,2 16,2 16,18 24,18 24,10 32,10 32,2 40,2 40,18 48,18 48,10 60,10"/></svg></span>
+        </div>
+        <h3>Traffic Light Controller</h3>
+        <p>A synchronized intersection controller with pedestrian override, modeled as a finite state machine on real hardware.</p>
+        <ul class="metrics metrics-sm">
+          <li><strong>5</strong><span>States</span></li>
+          <li><strong>3</strong><span>Intersections</span></li>
+          <li><strong>1</strong><span>Override Mode</span></li>
+        </ul>
+        <div class="chips"><span>VHDL</span><span>FSM Design</span><span>Basys 3</span></div>
+        <a class="card-link" href="https://github.com/meet0-0/traffic-light-fgpa" target="_blank" rel="noopener">View Repository &#8599;</a>
+      </article>
+
+      <article class="project-card reveal" style="--delay:160ms">
+        <div class="card-top">
+          <span class="card-tag">SOFTWARE</span>
+          <span class="card-freq" aria-hidden="true"><svg viewBox="0 0 60 20"><polyline points="0,10 6,10 9,3 12,17 15,10 20,10 23,5 26,15 29,10 60,10"/></svg></span>
+        </div>
+        <h3>Pomodoro Timer</h3>
+        <p>A lightweight focus-timer app with session tracking, built to sharpen daily habits around long build sessions.</p>
+        <ul class="metrics metrics-sm">
+          <li><strong>3</strong><span>Session Modes</span></li>
+          <li><strong>100%</strong><span>Offline</span></li>
+        </ul>
+        <div class="chips"><span>VHDL</span><span>C++</span></div>
+        <a class="card-link" href="https://github.com/meet0-0/Pomodoro_Timer_Basys" target="_blank" rel="noopener">View Repository &#8599;</a>
+      </article>
+
+    </div>
+
+    <div class="github-graph reveal">
+  <div class="gh-head">
+    <span>GITHUB ACTIVITY</span>
+    <a href="https://github.com/meet0-0" target="_blank" rel="noopener">
+      @meet0-0 ↗
+    </a>
+  </div>
+
+  <img 
+    src="https://ghchart.rshah.org/meet0-0"
+    alt="GitHub contribution graph"
+    style="width:100%;"
+  >
+</div>
+  </div>
+</section>
+
+<div class="wave-divider" data-amp="12"><svg preserveAspectRatio="none" viewBox="0 0 1200 60"><path id="wave3" /></svg></div>
+
+<!-- ============================================================ -->
+<!-- EXPERIENCE -->
+<!-- ============================================================ -->
+<section id="experience">
+  <div class="wrap">
+    <p class="section-tag reveal">CH3 // EXPERIENCE</p>
+    <h2 class="reveal">Timebase</h2>
+
+    <div class="timeline">
+      <div class="tl-axis" aria-hidden="true"></div>
+
+      <div class="tl-item reveal">
+        <div class="tl-node"></div>
+        <div class="tl-time">May 2026 - July 2026</div>
+        <div class="tl-card">
+          <h3>Bose - McIntosh Laboratory</h3>
+          <p class="tl-role">Hardware Analyst Intern</p>
+          <p class="body-text">Analyzed hardware performance data and supported test procedures for acoustic and electronics platforms.</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal" style="--delay:100ms">
+        <div class="tl-node"></div>
+        <div class="tl-time">January 2026 - May 2026 &ndash; 2026</div>
+        <div class="tl-card">
+          <h3>Watson Combat Robot League</h3>
+          <p class="tl-role">Team Leader</p>
+          <p class="body-text">Led a student team through the full build cycle of a competition combat robot, from CAD to control firmware.</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal" style="--delay:200ms">
+        <div class="tl-node"></div>
+        <div class="tl-time">April 2024 - June 2025</div>
+        <div class="tl-card">
+          <h3>EkochingMUN</h3>
+          <p class="tl-role">Director General</p>
+          <p class="body-text">Directed conference operations and committee design for a multi-day Model UN.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-divider" data-amp="10"><svg preserveAspectRatio="none" viewBox="0 0 1200 60"><path id="wave4" /></svg></div>
+
+<!-- ============================================================ -->
+<!-- SKILLS -->
+<!-- ============================================================ -->
+<section id="skills">
+  <div class="wrap skills-grid">
+    <div class="reveal">
+      <p class="section-tag">SKILLS</p>
+      <h2>Signal Strength</h2>
+      <div class="bars">
+        <div class="bar-row"><span>C</span><div class="bar"><i style="--w:80%"></i></div><em>80%</em></div>
+        <div class="bar-row"><span>C++</span><div class="bar"><i style="--w:70%"></i></div><em>70%</em></div>
+        <div class="bar-row"><span>VHDL</span><div class="bar"><i style="--w:75%"></i></div><em>75%</em></div>
+        <div class="bar-row"><span>Python</span><div class="bar"><i style="--w:60%"></i></div><em>60%</em></div>
+        <div class="bar-row"><span>Java</span><div class="bar"><i style="--w:70%"></i></div><em>70%</em></div>
+
+      </div>
+    </div>
+
+    <div class="reveal" style="--delay:120ms">
+      <p class="section-tag">TOOLING</p>
+      <h2>Stack</h2>
+      <div class="tag-cloud">
+        <span>Embedded C</span><span>FPGA</span><span>Linux</span>
+        <span>Java</span><span>Vivado</span><span>KiCad</span>
+        <span>Git</span><span>Fusion 360</span><span>Python</span>
+      </div>
+
+      <p class="section-tag learning-tag">CURRENTLY EXPLORING</p>
+      <ul class="learning-list">
+        <li>Embedded Systems</li>
+        <li>PCB Design</li>
+        <li>Backend Linux</li>
+        <li>Computer Vision</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="wave-divider" data-amp="14"><svg preserveAspectRatio="none" viewBox="0 0 1200 60"><path id="wave5" /></svg></div>
+
+<!-- ============================================================ -->
+<!-- TERMINAL -->
+<!-- ============================================================ -->
+<section id="terminal">
+  <div class="wrap">
+    <p class="section-tag reveal">SHELL</p>
+    <h2 class="reveal">Try the terminal.</h2>
+    <p class="body-text reveal">Type <code>help</code> to see what's available.</p>
+
+    <div class="term-window reveal">
+      <div class="term-bar">
+        <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+        <span class="term-title">meetpatel@portfolio:~</span>
+      </div>
+      <div class="term-body" id="termBody">
+        <div id="termOutput"></div>
+        <div class="term-input-row">
+          <span class="prompt">meetpatel@portfolio:~$</span>
+          <input id="termInput" autocomplete="off" spellcheck="false" aria-label="Terminal input">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================ -->
+<!-- FOOTER -->
+<!-- ============================================================ -->
+<footer>
+  <div class="wave-divider footer-wave" data-amp="18">
+    <svg preserveAspectRatio="none" viewBox="0 0 1200 60">
+      <path id="wave6" />
+    </svg>
+  </div>
+
+  <div class="wrap footer-inner">
+    <h2>Mission Complete?</h2>
+    <p>Let's build something together.</p>
+
+    <div class="footer-links">
+      <a href="mailto:meetpatel27105@gmail.com">Email</a>
+
+      <a href="https://github.com/meet0-0" target="_blank" rel="noopener">
+        GitHub
+      </a>
+
+      <a href="https://linkedin.com/in/meetpatel-tech" target="_blank" rel="noopener">
+        LinkedIn
+      </a>
+    </div>
+
+    <p class="footer-meta">
+      MEET PATEL &mdash; SYSTEM v5.0 &mdash; SIGNAL TERMINATED
+    </p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
